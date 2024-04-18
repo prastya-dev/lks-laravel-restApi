@@ -8,10 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Response extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'id', 'form_id','user_id','date','update'
+        'id', 'form_id', 'user_id', 'date', 'update'
     ];
-    public function user(){
-        return $this->belongsTo(User::class,'user_id');
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
     }
 }

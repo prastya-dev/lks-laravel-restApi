@@ -16,23 +16,22 @@ class ResponseResource extends JsonResource
     public function toArray($request)
     {
         return ([
-           
-                
-                    "date" => $this->date,
-                    "user" => [
-                        "id"=> $this->user->id,
-                        "name" => $this->user->username,
-                        "email" => $this->user->email,
-                    ],
-                    "answer" => [
-                        "p" => "bb",
-                        "alamat" => "bbb",
-                        "tanggal lahir" => "bbb",
-                        "gender" => "bbb",
-                    ]
-                ,
-                
-            
+
+
+            "date" => $this->date,
+            "user" => [
+                "id" => $this->user->id,
+                "name" => $this->user->username,
+                "email" => $this->user->email,
+            ],
+            "answer" => [
+                "p" => "bb",
+                "alamat" => "bbb",
+                "tanggal lahir" => "bbb",
+                "gender" => "bbb",
+            ],
+
+
         ]);
     }
 }
